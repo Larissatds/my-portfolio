@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             !squares[playerCurrentIndex +width]?.classList.contains('skills') &&
             !squares[playerCurrentIndex +width]?.classList.contains('portfolio') &&
             !squares[playerCurrentIndex +1]?.classList.contains('contact') && 
-            e == null
+            e == null || e == 0
         ){
             document.getElementById("sidenav").style.width = "0";
             $("#index").show();
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     }
     const navAHome = document.querySelector('.navAHome');
-    navAHome.addEventListener('click', () => showText());
+    navAHome.addEventListener('click', () => showText(0));
     const navAbout = document.querySelector('.navAbout');
     navAbout.addEventListener('click', () => showText(1));
     const navSkills = document.querySelector('.navSkills');
