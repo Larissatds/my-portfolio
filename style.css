@@ -1,0 +1,360 @@
+@font-face {
+    font-family: RetroGaming;
+    src: url(font/RetroGaming.ttf);
+ }
+
+* { box-sizing: border-box; }
+html, body { 
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; 
+  overflow: hidden;
+}
+
+th, td{
+    padding: .1rem !important;
+}
+
+form input, textarea{
+    width: 80%;
+}
+
+.main-title{
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
+}
+.main-title:nth-child(2){
+    animation: type2 4s steps(60, end);
+}
+.typing{
+    animation: blink 1s infinite;
+}
+ @keyframes type{ 
+    from { width: 0; } 
+  } 
+  
+  @keyframes type2{
+    0%{width: 0;}
+    15%{width: 0;}
+    20%{width: 100;}
+  } 
+  
+  @keyframes blink{
+    to{opacity: .0;}
+  }
+  
+.title{
+    color: #00292f;
+    font-size: 65px;
+}
+.text{
+    color: #227669;
+}
+
+#msgForm a{
+    font-size: 25px;
+    color: #227669;
+}
+#msgForm a:hover{
+    color: #00292f;
+}
+#msgForm .title{
+    color: #00292f;
+    font-size: 55px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.closebtn, .navAHome, .navAbout, .navSkills, .navPortfolio, .navContact {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #209f8c;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #00292f;
+    text-decoration: none;
+}
+
+.navRedirect:hover{
+    color: #209f8c;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn{
+    font-size: 40px;
+    cursor: pointer;
+    margin: 10px;
+    color: #00292f;
+}
+
+.sidenav div{
+    padding: 8px 8px 8px 22px;
+}
+
+.navRedirect{
+    width: 40px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+button {outline:0 !important; cursor: 
+ pointer;}
+button:active {
+box-shadow: inset 0 0 !important;
+}
+/* COLORS */
+:root {
+ --black: #000000; 
+ --dark-gray: #1d1d1d;
+}
+body {
+ background-color: #ffd5bc !important;
+ font-family: RetroGaming !important;
+}
+
+.main-screen{
+    margin-top: 50px;
+}
+
+.gameboy {
+  display: block;
+  margin-top: 15px;
+  padding: 15px;
+}
+.gameboy-body {
+ background-color: #209f8c;
+ width: 480px;
+ height: 480px;
+ border-radius: 20px 20px 50px;
+ border: 6px solid var(--black);
+ box-shadow: inset 10px 0 rgba(255,255,255,0.7), inset -10px 0 rgba(0,0,0,0.2) ;
+ position: relative;
+}
+
+.screen {
+ width: 432px;
+ height: 252px;
+ background-color: #24392a;
+ border: solid black;
+ margin: 30px 0 0 18px;
+}
+.screen .grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 426px;
+    height: 246px;
+    border: inset #44684d;
+    position: relative;
+}
+.screen .grid div{
+    width: 30px;
+    height: 30px;
+}
+
+.actions {
+ padding: 35px 54px 0;
+}
+.directions {
+width: 129px;
+height: 129px;
+ position: relative;
+ display: flex;
+ float: left;
+}
+.directions button {
+ border: 6px solid var(--black);
+ background-color:var(--dark-gray);
+ width: 36px;
+ height: 36px;
+ position: absolute;
+ z-index: 9;
+}
+.arrow-left {
+ border-right: none !important;
+ box-shadow: inset 0 4px rgba(255,255,255,0.7), inset 0 -4px rgba(0,0,0,0.2);
+ top: 50%;
+ margin-top: -15px;
+ left: 19.5px;
+}
+.arrow-top {
+ border-bottom: none !important;
+ box-shadow: inset 0 4px rgba(255,255,255,0.7);
+ left: 50%;
+ margin-left: -15px;
+ top: 13.5px;
+}
+.arrow-right {
+ border-left: none !important;
+ box-shadow: inset 0 4px rgba(255,255,255,0.7), inset 0 -4px rgba(0,0,0,0.2);
+ top: 50%;
+ margin-top: -15px;
+ right: 13.5px;
+}
+.arrow-bottom {
+ border-top: none !important;
+ box-shadow: inset 0 -4px rgba(0,0,0,0.2);
+ left: 50%;
+ margin-left: -15px;
+ bottom: 13.5px;
+}
+
+.directions:after {
+ content: "";
+ width: 30px;
+ height: 30px;
+ background-color: var(--dark-gray);
+ position: relative;
+ top: 50%;
+ left: 50%;
+ margin: -15px;
+ z-index: 1;
+}
+.buttons {
+ padding: 8px 3px;
+ float: right;
+ position: relative;
+ transform: rotate(-20deg);
+ top: 40px;
+}
+.buttons button {
+ background-color: var(--dark-gray);
+ border: 6px solid var(--black);
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ padding: 0;
+ box-shadow: inset 4px 0 rgba(255,255,255,0.7), inset -4px 0 rgba(0,0,0,0.2) ;
+ margin: 0 5px;
+}
+.button-a{
+    background-image: url(img/icons/github.png);
+    background-size: 60%;    
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.button-b{
+    background-image: url(img/icons/linkedin.png);
+    background-size: 50%;    
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.grass-1{
+    background-image: url(img/grass-1.jpg);
+}
+.grass-2{
+    background-image: url(img/grass-2.jpg);
+}
+
+.road{
+    background-image: url(img/sand.jpg);
+}
+.curve-1 {
+    background-image: url(img/sand.jpg);
+    border-radius: 10px 0px 0px;
+}
+.curve-2 {
+    background-image: url(img/sand.jpg);
+    border-radius: 0px 0px 0px 10px;
+}
+.curve-3 {
+    background-image: url(img/sand.jpg);
+    border-radius: 0px 0px 10px;
+}
+.curve-4 {
+    background-image: url(img/sand.jpg);
+    border-radius: 0 10px 0 0;
+}
+
+.about {
+    background-color: #da8c5b;
+    background-image: url(img/icons/about.png);  
+    background-size: 70%;
+    border-radius: 5px 5px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.skills {
+    background-color: #da8c5b;
+    background-image: url(img/icons/skills.png);  
+    background-size: 80%;
+    border-radius: 0 0 5px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio {
+    background-color: #da8c5b;
+    background-image: url(img/icons/portfolio.png);  
+    background-size: 100%;
+    border-radius: 0 0 5px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact {
+    background-color: #da8c5b;
+    background-image: url(img/icons/contact.png);  
+    background-size: 80%;
+    border-radius: 0px 5px 5px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player {
+    background-color: #da8c5b;
+    background-size: 80%; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.back {
+    background-image: url(img/player-back.gif);   
+}
+.front {
+    background-image: url(img/player-front.gif);   
+}
+.left {
+    background-image: url(img/player-left.gif);   
+}
+.right {
+    background-image: url(img/player-right.gif);   
+}
+
+@media(max-width: 960px){
+    html, body{
+        overflow: auto;
+    }
+}
+@media(max-width: 560px){
+    .title{
+        font-size: 50px;
+    }
+}
+
+.stars{
+    width: 30px;
+}
