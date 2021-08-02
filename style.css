@@ -375,6 +375,9 @@ height: 129px;
     }
 }
 @media screen and (max-width: 330px){
+    html, body{
+        overflow: auto;
+    }
     .gameboy-body{
         left: -35%;
     }
@@ -388,12 +391,7 @@ height: 129px;
     }
     .gameboy-body{
         left: -50%;
-        scale: 50%
-    }
-}
-@media screen and (max-width: 260px){
-    html, body{
-        overflow: auto;
+        scale: 40%
     }
 }
 
