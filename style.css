@@ -379,6 +379,17 @@ height: 129px;
         left: -35%;
     }
 }
+@media screen and (max-width: 320px){
+    .gameboy-body{
+        left: -50%;
+        scale: 50%
+    }
+}
+@media screen and (max-width: 260px){
+    html, body{
+        overflow: auto;
+    }
+}
 
 .stars{
     width: 30px;
