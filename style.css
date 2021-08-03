@@ -396,6 +396,18 @@ height: 129px;
         overflow: auto;
     }
 
+    .title {
+        font-size: 40px;
+    }
+
+    .text{
+        font-size: 18px;
+    }
+
+    .stars{
+        width: 25px;
+    }
+
     .gameboy-body{
         width: 396px;
         height: 396px;
